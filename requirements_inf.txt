@@ -1,0 +1,11 @@
+pyyaml
+dvc[gdrive]
+loguru==0.6.0
+uvicorn==0.16.0
+pydantic==1.9.0
+fastapi==0.70.1
+torchvision==0.12.0
+albumentations==1.1.0
+python-multipart==0.0.5
+opencv-python==4.5.4.60
+efficientnet-pytorch==0.7.1
