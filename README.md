@@ -1,6 +1,6 @@
 # EuroSat~[CLF]
 
-> The API provides the ability to classify land in geospatial images.
+> The service provides the ability to classify land in geospatial images.
 
 ## DVC
 
@@ -18,3 +18,10 @@
 >
 > Docker Run => sudo docker run -p 8080:5011 -v /{full path to project}/logs/:/app/logs/ fastapi_eurosat
  
+
+## Streamlit
+
+> Docker build => sudo docker build -t streamlit -f DOCKER_STREAMLIT .
+> 
+> Docker Run => sudo docker run -p 8081:8501 -e IP={IP FAST_API} -e PORT={PORT FAST_API} -v /{full_path_to_project}/logs/:/app/logs/ streamlit
+
