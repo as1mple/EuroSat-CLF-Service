@@ -1,0 +1,20 @@
+FROM python:3.8
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && \
+    apt-get install ffmpeg libsm6 libxext6  -y && \
+    rm -rf /var/lib/apt/lists/*
+
+
+COPY requirements_ST.txt ./requirements_ST.txt
+
+RUN python -m pip install -U pip && \
+    python -m pip install -r requirements_ST.txt && \
+    python -m pip cache purge
+
+COPY ./src/streamlit_run.py /app/src/streamlit_run.py
+COPY ./src/modules/request.py /app/src/modules/request.py
+
+WORKDIR /app/
+
+CMD streamlit run src/streamlit_run.py
