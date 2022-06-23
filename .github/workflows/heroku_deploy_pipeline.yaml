@@ -1,5 +1,5 @@
 name: HEROKU_DEPLOY_PIPELINE
-on:
+on: 
   push:
     branches:
       - 'master'
